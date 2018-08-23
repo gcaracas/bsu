@@ -1,3 +1,11 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Thu Aug 23 14:13:41 2018
+
+@author: gcu
+"""
+
 import glob
 import os
 import re
@@ -21,35 +29,17 @@ for file in files:
         # Add data into dictionary
         dictionary = {"filename":file, "values":pd.Series(words)}
         finalDataframe = finalDataframe.append(pd.DataFrame(dictionary))
-        
-        
-# list of words in total
-wordstmp = finalDataframe['values']
-dic2 = { "words" : wordstmp }
-df1 = pd.DataFrame(dic2)
-df1 = df1.set_index("words")
 
-sss2 = [finalDataframe['filename']=='files/file2.txt']
-sss1 = [finalDataframe['filename']=='files/file1.txt']
-sss1[0]
-
-dd1=list(sss1[0])
-df1['file1']= dd1
-
-dd2=list(sss2[0])
-df1['file2']=dd2
-
-finalDataframe['file1']=dd1
-finalDataframe['file2']=dd2
-
-test1=pd.pivot_table(finalDataframe, values=['file1','file2'],index=['values'])
-
-test3 = pd.crosstab(finalDataframe['values'], finalDataframe['filename'], margins=True)
-
-
-# Remove last column which is the total. We don't need this.
-test3 = test3.drop(columns=['All'])
+# Create a cross tab where I get a list of each word and 
+# the fiels that contain it.
+test3 = pd.crosstab(finalDataframe['values'], finalDataframe['filename'])
+# To post process it, let's remove the last crosstab's column
+#test3 = test3.drop(columns=['All'])
+# Replace the [1,0] values in the existence columns
+# and replace it with the file name
 for file in list(test3.columns.values):
     test3[file].replace([0,1],['',file],inplace=True)
-
+# Convert the values of each row from series to list
 chale1=test3.apply(lambda x: x.tolist(), axis=1)
+
+a = chale1.to_dict()
