@@ -23,8 +23,16 @@ sections = []
 for file in files:
     with open(file, mode="r") as f:
         lines = f.read()
-    # First split into sections, each section is a vote.
-    #sections = sections.append(re.split('\n',lines))
-#sections = re.split('^\n',lines)
-#sections = re.split('\n\W+:\W+\n\W+:\W+\n\W+:\W+\n', lines)
-sections = re.split(".\S", lines, re.IGNORECASE)
+sections = re.split("gerardocaracas\n",lines)
+
+final = []
+for list in sections:
+    # List = per block
+    ai = list.split('\n')
+    z = dict()
+    # ai = line per bloxk "a:b"
+    for list2 in ai:
+        ab = list2.split(":")
+        print(ab(1))
+        #z[ab[0]] = ab[1]
+        
