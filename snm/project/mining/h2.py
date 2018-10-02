@@ -98,7 +98,7 @@ def acceptanceRatio(T=''):
    
     
 #usrTable=getTableForUser(U='Werdna',T=data)
-usrTable=getTableForUser(U='Epbr123',T=data)    
+usrTable=getTableForUser(U='Wikiwoohoo',T=data)    
 usrTable.reset_index(inplace=True)
 usrTable = validateHour(T=usrTable)
 usrTable['date']=pd.to_datetime(usrTable.DAT)
@@ -108,8 +108,34 @@ acceptanceRatio(T=usrTable)
 usrTable.set_index('date',inplace=True)
 
 r=usrTable[['accRatio','neuRatio','rejRatio']]
-plt.figure();
-r.plot();
+#plt.figure();
+#r.plot();
 
 
+ft=usrTable.reset_index()
+#x=ft['date']
+#y=ft['accRatio']
+#z=ft['NUM_WORDS']
+#x=x.values
+#y=y.values
+#z=z.values
+#fig, ax = plt.subplots()
+#ax.fill(x, y,z, zorder=10)
+#ax.grid(True, zorder=5)
+#plt.show()
 
+
+#from sklearn.decomposition import PCA
+#pca = PCA(n_components=2)
+#pca.fit(r)
+#X_ = pca.transform(r)
+
+
+#dfPCA = pd.DataFrame({'x1': X= ['a','b']_[:,0], 'x2': X_[:,1]})
+#plt.scatter(dfPCA['x1'], dfPCA['x2'])
+ 
+
+#ft=usrTable.reset_index()
+#x=(ft['date']).values
+#y=(ft['accRatio']).values
+#ssplt.scatter(x,y)
