@@ -44,3 +44,12 @@ ax.axhline(y=0, color='k')
 ax.axvline(x=0, color='k')
 
 
+y_tbl = [ y for y in np.log10(ft.pdf(x))]
+
+fig, ax = plt.subplots()
+x = np.arange(-4.0, 4.0, 0.01)
+ax.plot(x,y_tbl, c='red')
+ax.plot(x, ft.pdf(x), c='blue')
+ax.grid(True, which='both')
+ax.axhline(y=0, color='k')
+ax.axvline(x=0, color='k')
