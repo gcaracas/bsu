@@ -1,0 +1,64 @@
+https://parts-of-speech.info
+
+    'Sinda his face black his eyes red',
+-------
+For alien word:
+Sinda his   face  black his  eyes red
+Noun  pron  noun adj    pron noun adj
+
+Sinda has   his     face  black       and his   eyes red 
+Noun  verb  pronoun noun  adjective  conj pron  noun adjective
+ Sub   Verb 
+       predicate
+---------
+    'Tamak',
+     Noun
+
+--------
+
+    'The river Tamak in winter',
+The        river <freezes? I am just making it up> in      winter
+Determiner noun  verb                              prepos  noun
+--------------
+
+    'Darmok and Jalad at Tanagra',
+
+Darmok and         Jalad are   at   Tangara
+noun   conjunction noun  verb  prep noun
+
+-------------
+
+    'Darmok and Jalad on the ocean',
+Darmok and         Jalad are   on          the         ocean
+noun   conjuntion  noun  verb  preposition determiner  noun
+
+----------
+
+    'Socath his eyes opened',
+
+Socath has  opened his      eyes
+noun   verb verb   pronoun  noun
+-----------
+
+
+#    'The beast of Tanagra Usani his army Jakka when the walls fell', # don't worry about this one
+
+
+    'Picard and Dathan at Eladrel',
+Picard and         Dathan are  at          Eldrel
+noun   conjuntion  noun   verb preposition noun
+
+_____________
+    'Marab with sails unfurled',
+Marab unflured the        sails
+noun  verb     determiner noun
+
+-------------
+
+    'Timba his arms open',
+Timda has  opened his      arms
+noun  verb verb   pronoun  noun
+------------
+    'Timba at rest'
+Timba is   resting
+noun  verb verb 
